@@ -1,0 +1,51 @@
+.first-gradient{
+    filter: blur(100px);
+    opacity: .7;
+    z-index: -1;
+}
+.welcome-text, .info-text{
+    animation: movein .6s linear;
+}
+.btns{
+    animation: movein .5s linear;
+}
+.movein{
+    animation: movein .5s linear;
+}
+.links{
+   padding: .75rem 1.5rem; 
+   color: rgb(87, 86, 86);
+   transition: all .3s ease-in-out;
+}
+.links:hover{
+    opacity: .7;
+}
+.active{
+    color: rgb(43, 43, 206);
+    background-color: rgba(0, 0, 255, 0.1);
+    padding: .75rem 1.5rem;
+    border-radius: 0.5rem;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+}
+.popin{
+    animation: popin .2s ease-in;
+}
+
+@keyframes movein{
+    0%{
+        filter: blur(5px);
+    }
+    100%{
+        filter: blur(0);
+    }
+}
+@keyframes popin {
+    0%{
+        right: -10rem;
+    }
+    100%{
+        right: 0;
+    }
+}
