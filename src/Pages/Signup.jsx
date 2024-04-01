@@ -7,7 +7,7 @@ import { LoginForm } from "../components/LoginForm";
 
 export const Signup = () => {
   return (
-    <div className="w-full overflow-hidden flex h-screen">
+    <div className="w-full flex h-screen justify-center items-center">
       <div className="w-full md:w-[50%] lg:w-[40%] h-[80%] lg:h-full flex items-center justify-center relative lg:overflow-hidden">
         <div className="w-[95%] lg:w-[80%] xl:w-[60%] h-[80%]">
           <div className="logo w-[7.5rem] cursor-pointer">
@@ -18,7 +18,7 @@ export const Signup = () => {
             Welcome to <span className="text-blue-600 font-bold">ShareIT</span>
           </h2>
           <p className="text-md info-text mt-3 opacity-[.7] text-[15px] lg:text-md">
-            Here you have the ability share your socials with your <br></br>
+            Here you have the ability to share your socials with your <br></br>
             friends in on click
           </p>
 
@@ -32,7 +32,12 @@ export const Signup = () => {
           <OtherLoginOptions manually={"Or SignUp Manually"} />
 
           {/* login form */}
-          <LoginForm btn={"SignUp Now"} linkto={"/"} option={"LogIn"} whatToDo={"signup"} />
+          <LoginForm
+            btn={"SignUp Now"}
+            linkto={"/"}
+            option={"LogIn"}
+            whatToDo={"signup"}
+          />
         </div>
 
         {/* gradients */}

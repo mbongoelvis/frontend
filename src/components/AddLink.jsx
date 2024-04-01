@@ -10,7 +10,7 @@ export const AddLink = ({ delteLink }) => {
 
   console.log(social);
   return (
-    <div className="mt-5 w-full p-4 bg-gray-100 rounded-lg">
+    <div className="mt-5 w-full p-4 bg-gray-50 rounded-lg">
       <div className="flex justify-between">
         <p className="flex items-center gap-1 opacity-[.6]">
           <FaEquals />
@@ -22,7 +22,7 @@ export const AddLink = ({ delteLink }) => {
       </div>
       <form className="mt-6">
         <div>
-          <labe className="text-sm text-gray-500">Platform</labe>
+          <label className="text-sm text-gray-500">Platform</label>
           <select
             className="w-full text-gray-500 px-4 py-3 cursor-pointer mt-2 bg-transparent border border-gray-300 rounded-lg"
             onChange={(e) => setSocial(e.target.value)}
@@ -40,7 +40,7 @@ export const AddLink = ({ delteLink }) => {
           </select>
         </div>
         <div className="mt-6 flex flex-col">
-          <labe className="text-sm text-gray-500">Platform</labe>
+          <label className="text-sm text-gray-500">Platform</label>
           <div className="mt-2 px-4 rounded-lg py-3 bg-transparent border flex gap-3 items-center border-gray-300">
             <FaLink className="opacity-[.5]" />
             <input

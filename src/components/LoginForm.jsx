@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import BeatLoader from "react-spinners/BeatLoader";
 
-
 export const LoginForm = ({ btn, linkto, option, whatToDo }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,8 +14,8 @@ export const LoginForm = ({ btn, linkto, option, whatToDo }) => {
       email: email,
       password: password,
     };
-
     const finalData = JSON.stringify(userData);
+
     await fetch(`http://localhost:5000/user/${whatToDo}`, {
       method: "POST",
       body: finalData,
@@ -25,22 +24,23 @@ export const LoginForm = ({ btn, linkto, option, whatToDo }) => {
       },
     })
       .then((responds) => {
-        if (responds.ok) window.location.href = "dashboard/linksetup";
         return responds.json();
       })
       .then((data) => {
-        console.log(data);
+        if (data.message == "ok" && whatToDo == "login") {
+           window.location.href = "dashboard/linksetup";
+           // storing the user ID in the session storage to be reuse
+           JSON.stringify(sessionStorage.setItem("userID", data.user._id));
+        }
       });
-  }
+  };
 
   // form submission
   const submitForm = (e) => {
     e.preventDefault();
+    setLoading(!false);
+    sendData();
     setLoading(!loading);
-    setTimeout(() => {
-      sendData();
-      setLoading(false);
-    },1000);  
   };
 
   return (
@@ -70,7 +70,7 @@ export const LoginForm = ({ btn, linkto, option, whatToDo }) => {
           />
         </div>
         <button className="w-full btns h-[43px] bg-black flex items-center justify-center mt-12 rounded text-white hover:opacity-[.7] transition ease-in-out">
-           {loading? <BeatLoader color="white" size={10} /> : btn}
+          {loading ? <BeatLoader color="white" size={10} /> : btn}
         </button>
 
         {/* dont have an account? */}

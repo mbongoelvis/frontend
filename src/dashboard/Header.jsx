@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <div className="w-full bg-white flex items-center justify-between py-3 rounded-xl px-3">
       {/* logo */}
-      <Link to={"/userpage"}>
+      <NavLink to={"/userpage"}>
         <img
           src="desktop.png"
           className="hidden lg:block"
@@ -14,7 +14,7 @@ export const Header = () => {
           alt=""
         />
         <img src="mobile.png" className="lg:hidden" width="30px" alt="" />
-      </Link>
+      </NavLink>
       {/* links and profile details */}
       <div className="flex gap-8 items-center">
         <NavLink

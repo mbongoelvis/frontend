@@ -17,7 +17,7 @@ export const Signin = () => {
             Welcome to <span className="text-blue-600 font-bold">ShareIT</span>
           </h2>
           <p className="text-md info-text mt-3 opacity-[.7] text-[15px] lg:text-md">
-            Here you have the ability share your socials with your <br></br>
+            Here you have the ability to share your socials with your <br></br>
             friends in on click
           </p>
 
