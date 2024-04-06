@@ -34,7 +34,7 @@ export const Phone = () => {
     fetchUserInfo()
   }, [])
   return (
-    <div className="w-[80%] md:max-w-[70%] lg:max-w-[50%] p-2 md:h-[83%] border-gray-400 border-[.12rem] rounded-[3rem]">
+    <div className="w-[80%] md:max-w-[70%] h-[39rem] lg:max-w-[50%] p-2 border-gray-400 border-[.12rem] rounded-[3rem]">
       <div className="w-full flex items-center flex-col pt-8 px-5 h-full pb-5 border-gray-400 border-[.12rem] rounded-[2.5rem] relative">
         <ProfilePictureAndEmail email={email} name={name} />
         <div className="w-full max-h-full mt-[5rem] md:mt-8 gap-3 flex flex-col overflow-scroll">
