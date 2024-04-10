@@ -3,6 +3,11 @@
     opacity: .7;
     z-index: -1;
 }
+.scroll{
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    scroll-snap-type: mandatory;
+}
 .welcome-text, .info-text{
     animation: movein .6s linear;
 }

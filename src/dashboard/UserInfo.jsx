@@ -11,7 +11,7 @@ export const UserInfo = () => {
       {/* profile picture */}
       <div className="w-full min-h-12 bg-gray-50 py-5 mt-5 rounded-xl px-3 flex items-center justify-between">
         <p className="text-gray-500">Profile picture</p>
-        <div className="h-[200px] w-[200px] rounded-xl border-2 border-blue-500 border-dotted overflow-hidden flex items-center justify-center relative group">
+        <div className="h-[200px] w-[200px] rounded-xl border-2 bg-gray-300 border-blue-500 border-dotted overflow-hidden flex items-center justify-center relative group">
           <label htmlFor="file">
             <div className="hidden group-hover:flex justify-center flex-col ease-in-out duration-[.5s] bg-opacity-[.6] items-center z-10 w-full h-full absolute cursor-pointer bg-black text-white inset-0">
               <FaImage className="w-[3rem] h-[3rem]" />

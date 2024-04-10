@@ -35,7 +35,7 @@ export const UserPage = () => {
             {/* phone section */}
             <Phone />
           </div>
-          <Outlet className="bg-red-400" />
+          <Outlet/>
         </div>
       </div>
     </div>
