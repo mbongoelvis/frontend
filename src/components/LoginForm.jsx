@@ -16,7 +16,7 @@ export const LoginForm = ({ btn, linkto, option, whatToDo }) => {
     };
     const finalData = JSON.stringify(userData);
 
-    await fetch(`http://localhost:5000/user/${whatToDo}`, {
+    await fetch(`http://localhost:5000/${whatToDo}`, {
       method: "POST",
       body: finalData,
       headers: {
@@ -24,13 +24,16 @@ export const LoginForm = ({ btn, linkto, option, whatToDo }) => {
       },
     })
       .then((responds) => {
-        return responds.json();
+        if (responds.ok) {
+          window.location.href = "dashboard/linksetup";
+          return responds.json();
+        }
       })
       .then((data) => {
-        if (data.message == "ok" && whatToDo == "login") {
-           window.location.href = "dashboard/linksetup";
-           // storing the user ID in the session storage to be reuse
-           JSON.stringify(sessionStorage.setItem("userID", data.user._id));
+        if (whatToDo == "login") {
+          // storing the user ID in the session storage to be reuse
+          const id = data.user;
+          sessionStorage.setItem("userID", id);
         }
       });
   };

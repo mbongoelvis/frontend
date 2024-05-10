@@ -3,6 +3,7 @@ import { NavLink, Link} from "react-router-dom";
 import { FaLink, FaUser, FaEye } from "react-icons/fa";
 
 export const Header = () => {
+  const userId = sessionStorage.getItem("userID");
   return (
     <div className="w-full bg-white flex items-center justify-between py-3 rounded-xl px-3">
       {/* logo */}
@@ -13,7 +14,12 @@ export const Header = () => {
           width="130px"
           alt="logo"
         />
-        <img src="/public/mobile.png" className="lg:hidden" width="30px" alt="" />
+        <img
+          src="/public/mobile.png"
+          className="lg:hidden"
+          width="30px"
+          alt=""
+        />
       </Link>
       {/* links and profile details */}
       <div className="flex gap-8 items-center">
@@ -31,7 +37,7 @@ export const Header = () => {
       </div>
       {/* preview profile */}
       <Link
-        to="/preview"
+        to={`/${userId}`}
         className="px-6 py-3 border-[2px] rounded-lg transition ease-in-out text-blue-600 border-blue-500 hover:bg-blue-500 hover:text-white"
       >
         <FaEye className="block lg:hidden" />

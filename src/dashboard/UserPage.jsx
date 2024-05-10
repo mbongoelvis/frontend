@@ -16,8 +16,8 @@ export const UserPage = () => {
           <div
             className={
               isOpen
-                ? "bg-white z-40 absolute lg:static w-[96%] flex items-center justify-center md:w-[70%] duration-700 ease-in-out top-0 -left-[0] md:-left-[0] min-h-[90%] lg:min-h-full lg:w-[40%] rounded-xl"
-                : "bg-white z-40 absolute lg:static w-[96%] md:w-[70%] duration-700 ease-in-out top-0 -left-[94%] md:-left-[71%] min-h-[90%] lg:min-h-full lg:w-[40%] flex items-center justify-center rounded-xl"
+                ? "bg-white z-40 absolute lg:static w-[96%] flex items-center justify-center md:w-[70%] duration-700 ease-in-out top-0 -left-[0] md:-left-[0] min-h-[100%] lg:min-h-full lg:w-[40%] rounded-xl"
+                : "bg-white z-40 absolute lg:static w-[96%] md:w-[70%] duration-700 ease-in-out top-0 -left-[94%] md:-left-[71%] min-h-[100%] lg:min-h-full lg:w-[40%] flex items-center justify-center rounded-xl"
             }
           >
             {/* toggle menu */}

@@ -23,9 +23,8 @@ export const Signup = () => {
           </p>
 
           {/* login with google or github */}
-          <div className="w-full grid grid-cols-2 mt-8 gap-2 md:gap-8">
+          <div className="w-full mt-8">
             <LoginWithGoogle google={"SignUpWithGoogle"} />
-            <LoginWithGithub github={"SignUpWithGithub"} />
           </div>
 
           {/* other login options */}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import {
   FaEquals,
-  FaLink
+  FaLink,
+  FaLinkedin
 } from "react-icons/fa";
 
 export const AddLink = ({ delteLink }) => {

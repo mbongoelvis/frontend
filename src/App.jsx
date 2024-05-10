@@ -8,10 +8,24 @@ import { Route, Routes } from 'react-router-dom'
 import { Preview } from './Pages/Preview';
 import { ProtectRoute } from '../utility/ProtectRoute';
 import { PageNotFound } from '../404/PageNotFound';
+import { userContext } from '../userContext';
+import { useState } from 'react';
 
 function App() {
-
+  // creating all the require states
+  const [Profile, setProfile] = useState("")
+  const [Email, setEmail] = useState("")
+  const [Name, setName] = useState("")
+  const [UpdateProfile, setUpdateProfile] = useState({
+    "profilePicture": "",
+    "firstName": "",
+    "lastName": "",
+    "email": ""
+  })
+  const [Link, setLink] = useState("")
+ 
   return (
+    <userContext.Provider value={{}} >
     <div>
       <Routes>
         <Route path="/" exact element={<Signin />} />
@@ -23,9 +37,10 @@ function App() {
             <Route path="userinfo" element={<UserInfo />} />
           </Route>
         </Route>
-        <Route path="/preview" element={<Preview />} />
+        <Route path="/:userId" element={<Preview />} />
       </Routes>
-    </div>
+      </div>
+      </userContext.Provider>
   );
 }
 
